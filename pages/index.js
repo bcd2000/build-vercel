@@ -12,11 +12,14 @@ export default function Home() {
         <Link href="/posts/first-post">
           <a>this page!</a>
         </Link>
-        <Link href="/test-router/1">
-          <span>test router</span>
-        </Link>
       </h1>
-
+    {
+      [1,2,3,4,5].map((item,index) => {
+        return <Link href={`/test-router/${item}`} key={index}>
+        <span>test {item}</span>
+      </Link>
+      })
+    }
       <main>
         <h1 className="title">
           Learn <a href="https://nextjs.org">Next.js!</a>
